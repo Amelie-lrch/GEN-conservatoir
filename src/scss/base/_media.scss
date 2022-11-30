@@ -3,17 +3,16 @@ img, svg {
   height: auto;
 }
 
-/* flitre bicolors */
-
 .duotone {
-  background-color: map-get($colors, secondary );
+  background-color: map-get($colors, secondary);
   display: flex;
   position: relative;
 
-  img{
+  img {
     filter: grayscale(100%);
     mix-blend-mode: multiply;
     flex: 1 0 100%;
+    object-fit: cover;
   }
 
   &::before {
@@ -23,7 +22,7 @@ img, svg {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: map-get($colors, primary );
+    background-color: map-get($colors, primary);
     z-index: 1;
     mix-blend-mode: lighten;
   }
